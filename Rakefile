@@ -29,18 +29,10 @@ Jeweler::Tasks.new do |gem|
 
   gem.files             = `git ls-files`.split('\n').reject {|s| File.basename(s) == '.gitignore' }
   gem.test_files        = `git ls-files -- {test,spec}/*`.split('\n')
-
-  gem.add_dependency 'railties', '~> 4.0.0'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
-require 'rspec/core/rake_task'
-desc 'Run RSpec tests'
-RSpec::Core::RakeTask.new(:spec) do |test|
-  test.verbose = true
-end
-
-task :default => :spec
+task :default => :gemspec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
