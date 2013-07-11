@@ -1,4 +1,6 @@
-source 'https://rubygems.org'
+source "http://rubygems.org"
 
-# Specify your gem's dependencies in silk-bootstrap-rails.gemspec
-gemspec
+ruby '2.0.0'
+
+gem 'jeweler'
+gem 'rails', '~> 4.0.0'
